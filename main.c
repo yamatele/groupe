@@ -1,33 +1,50 @@
- #include<stdio.h>
- #include<stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include"prof.h"
 
-void changeValue(int *entier){
- 
- 	  *entier=*entier+1;
+Salle s;
+Professeur tamp;
 
- 
+
+
+int main (){
+
+s.nbre_prof=0;
+
+while(1){
+
+      do{
+        printf("quelle action voulez vous accomplir\n");
+        printf("1-ajouter prof vacataire\n");
+        printf("2-supprimer prof vacataire\n");
+        printf("3-afficher un prof vacataire\n");
+        printf("4-mettre a jour le nombre d'heures remplies par un professeur vacataire\n");
+        printf("5-afficher les professeurs en fin de contrat\n");
+        scanf("%d",&c);
+      }while(c<0 || c>5);
+
+      switch (c){
+
+          case 1 :
+          s.nbre_prof++;
+          tamp =creer_prof(),
+          
+
+
+      }
+
+
+
+
+
+
+
+
+
 }
 
-int main()
-{
-	
-int a;
-a=2;
-
-   changeValue(&a);
-    
-    printf("a=%d\n",a);
 
 
-     /*printf("la valeur de a est :%d\n",a);
-     printf("l'adresse de a est : %d\n",&a);
-
-     	//declaration d'un pointeur
-         int *p;
-         p=&a;
-         printf("affichons le pointeur: %d\n",p);
-        printf("la valeur de a :%d\n",*p);
-
-*/
-	return 0;
+  return 0;
 }
